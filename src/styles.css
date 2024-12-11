@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Universal Box-Sizing Reset */
+html {
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default anchor link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove table spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove form styling */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Prevent text selection highlighting */
+::selection {
+  background-color: #3390ff;
+  color: #fff;
+}
+
+/* Reset default styles for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Normalize line-height for paragraphs */
+p {
+  margin: 0;
+}
+
+/* Remove the default outline for focused elements */
+*:focus {
+  outline: none;
+}
+
+:root {
+  --dark-navy: #313e51;
+  --grey-navy: #3b4d66;
+  --light-bluish: #abc1e1;
+  --light-grey: #f4f6fa;
+  --green: #26d782;
+  --navy: #626c7f;
+  --light-purple: #f6e7ff;
+  --btn-light-purple: #d394fa;
+  --purple: #a729f5;
+  --red: #ee5454;
+  --pure-white: #ffffff;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--light-grey);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+body.dark-theme {
+  background-color: var(--dark-navy);
+  transition: background-color 0.4s ease-in-out;
+}
+
+body.dark-theme .category-title-container h3 {
+  color: var(--pure-white);
+}
+
+body.dark-theme .aside-container {
+  color: var(--pure-white);
+}
+
+body.dark-theme span {
+  color: var(--pure-white);
+}
+
+
+
+
+main {
+  margin-inline: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar-container {
+  margin-top: 20%;
+  display: flex;
+  align-items: center;
+  min-height: 1rem;
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  height: 92px;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  padding: 1.25rem;
+  cursor: pointer;
+  color: var(--pure-white);
+  background-color: var(--purple);
+}
+
+.submit-btn:hover {
+  background-color: var(--btn-light-purple);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+ul {
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    margin-inline: 8.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  ul {
+    margin-top: auto;
+  }
+
+  p {
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  main {
+    margin-inline: 4rem;
+  }
+}
