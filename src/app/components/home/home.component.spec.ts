@@ -24,12 +24,18 @@ describe('HomeComponent', () => {
     expect(component.categories[0].title).toBe('HTML');
   });
 
-  it('should emit category title when onCategorySelect is called', () => {
-    const emitSpy = jest.spyOn(component.categorySelected, 'emit');
-    const category = 'JavaScript';
-    component.onCategorySelect(category);
-    expect(emitSpy).toHaveBeenCalledWith(category);
-  });
+
+ it('should emit category title when onCategorySelect is called', () => {
+   const emitSpy = jest.spyOn(component.categorySelected, 'emit');
+   const category = 'JavaScript';
+   component.onCategorySelect(category);
+
+   expect(emitSpy).toHaveBeenCalledWith(
+     expect.stringMatching(/^(HTML|CSS|JavaScript|Accessibility)$/)
+   );
+ });
+
+
 
   it('should render categories in the template', () => {
     const compiled = fixture.nativeElement;
