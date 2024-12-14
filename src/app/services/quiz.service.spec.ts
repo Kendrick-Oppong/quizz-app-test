@@ -7,9 +7,6 @@ describe('QuizService', () => {
   let service: QuizService;
   const mockQuizData: Quiz[] = quizData.quizzes;
 
-  jest.mock('../../assets/data/data.json', () => ({
-    quizzes: mockQuizData,
-  }));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
